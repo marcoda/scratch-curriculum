@@ -1,15 +1,19 @@
----
-title: Balloons
+﻿---
+title: Luftballons
 level: Scratch 1
-language: en-GB
+language: de-DE
 stylesheet: scratch
 embeds: "*.png"
 materials: ["Club Leader Resources/*.*"]
+base: https://github.com/CodeClub/scratch-curriculum/blob/7f103592928e9ff0251c401fd6cfe78596737494/en-GB/Term%201/Balloons/Balloons.md
+translators: Carole Roth, Gianluca D'Amico, Marco D'Amico
+reviewers: Patrick, Ingrid, Christian
+status: moved to github (please don't edit it here anymore)
 ...
 
-# Einf�hrung { .intro }
+# Einführung { .intro }
 
-Wir wollen ein Ballon zerschmettern Spiel machen!
+Wir wollen ein Spiel machen, bei dem man Luftballons platzen lässt!
 
 <div class="scratch-preview">
 	<iframe allowtransparency="true" width="485" height="402" src="http://scratch.mit.edu/projects/embed/26745384/?autostart=true" frameborder="0"></iframe>
@@ -18,258 +22,256 @@ Wir wollen ein Ballon zerschmettern Spiel machen!
 
 # Schritt 1: Ballon animieren { .activity }
 
-## Checkliste f�r das Spiel { .check }
+## Arbeitsschritte { .check }
 
-+ Starte ein neues Scratch Projekt, und l�sche die Katzenfigur, so das das Projekt leer ist. Du kannst den online Scratch Editor hier finden: <a href="http://jumpto.cc/scratch-new">jumpto.cc/scratch-new</a>.
++ Starte ein neues Scratch-Projekt und lösche die Katzenfigur, so dass das Projekt leer ist. Du kannst den online Scratch-Editor hier finden: <a href="http://jumpto.cc/scratch-new">jumpto.cc/scratch-new</a>.
 
-+ F�ge eine neune Ballon Figur hinzu und einen passenden Hintergrund f�r die B�hne.
++ Füge eine neue Ballonfigur hinzu und wähle einen passenden Hintergrund für die Bühne.
 
 	![screenshot](balloons-balloon.png)
 
-+ F�ge diesen Code f�r deinen Ballon hinzu, so dass er auf dem Bildschirm herumfliegt:
++ Gib deinem Luftballon diesen Code, so dass er auf dem Bildschirm hin und her fliegt:
 
 	```blocks
-		when flag clicked
-		go to x:(0) y:(0)
-		point in direction (45 v)
-		forever
-			move (1) steps
-			if on edge, bounce
-		end
+		Wenn die grüne Flagge angeklickt
+		gehe zu x:(0) y:(0)
+		setze Richtung auf (45 v)
+		wiederhole fortlaufend
+			gehe (1) er-Schritt
+			pralle vom Rand ab
+		Ende
 	```
 
-+ Teste deinen Ballon. Bewegt er sich zu langsam? �ndere die Nummern in deinem Code, wenn du m�chtest, dass er schneller wird.
++ Teste deinen Ballon. Bewegt er sich zu langsam? Ändere die Zahlen in dem Code, wenn du ihn schneller machen möchtest.
 
-+ Hast du ebenfalls bemerkt, dass dein Ballon sich umdreht wenn er den B�hnenrand ber�hrt? 
++ Hast du denn auch bemerkt, dass dein Ballon sich umdreht, wenn er den Bühnenrand berührt? 
 
 	![screenshot](balloons-flip.png)
 
-	Ballons bewegen sich nicht so! Um das zu �ndern, klick auf die Ballonfigur und klicke dann das blaue `i` {.blockmotion}.
+	Luftballons bewegen sich aber nicht so! Um das zu verbessern, klicke auf die Ballonfigur und dann auf das blaue `i` {.blockmotion}.
 
 	![screenshot](balloons-info.png)
 	
-	In dem 'Drehmodus' Bereich, klicke auf den Punkt um die Drehung des Ballons zu stoppen.
+	In dem „Drehmodus“-Bereich, klicke auf den Punkt um die Drehung des Ballons zu stoppen.
 
 	![screenshot](balloons-lock.png)
 
-+ Teste dein Programm erneut um zu sehen, ob das Problem behoben ist.
-
++ Teste dein Programm erneut, um zu sehen, ob das Problem behoben ist.
 
 ## Speichere dein Projekt { .save }
 
-# Schritt 2: Zuf�llige Ballons { .activity }
+# Schritt 2: Zufallszahlen { .activity }
 
-##Checkliste f�r das Spiel { .check }
-+ Mit dem Code, den du jetzt hast, wird dein Ballon immer am selben Platz starten und sich in die selbe Richtung bewegen. Klicke einige Male auf die Flagge um dein Programm zu starten und du wirst sehen, dass es immer das gleiche ist.
+## Arbeitsschritte { .check }
 
-+ Anstatt jedes Mal die gleiche Position x und y zu benutzen, kannst du deine Figur eine zuf�llige Zahl w�hlen lassen. �ndere den Code deines Ballons, so dass es so aussieht:
++ Mit dem Code, den du jetzt hast, wird dein Ballon immer am selben Platz starten und sich in dieselbe Richtung bewegen. Klicke ein paar Mal auf die Flagge, um dein Programm zu testen. Du wirst sehen, dass es immer dasselbe tut.
+
++ Anstatt jedes Mal die gleiche x- und y-Position zu benutzen, kannst du Scratch auch zufällige Zahlen wählen lassen. Ändere den Code deines Ballons, so dass es so aussieht:
 
 	```blocks
-		when flag clicked
-		go to x:(pick random (-150) to (150)) y:(pick random (-150) to (150))
-		point in direction (45 v)
-		forever
-			move (1) steps
-			if on edge, bounce
-		end
+		Wenn die grüne Flagge angeklickt
+		gehe zu x:(Zufallszahl von (-150) bis (150)) y:(Zufallszahl von (-150) bis (150))
+		setze Richtung auf (45 v)
+		wiederhole fortlaufend
+			gehe (1) er-Schritt
+			pralle vom Rand ab
+		Ende
 	```
 
-+ Wenn du die gr�ne Flagge einige Male anklickst, wird dir auffallen, dass dein Ballon jedes Mal von einem anderen Platz aus startet.
++ Wenn du die grüne Flagge einige Male anklickst, wird dir auffallen, dass dein Ballon jedes Mal von einem anderen Platz aus startet.
 
-+ Du kannst sogar eine zuf�llige Nummer benutzen um jedes Mal eine zuf�llige Ballonfarbe zu bekommen:
++ Du kannst sogar eine Zufallszahl benutzen, um eine beliebige Ballonfarbe zu bekommen:
 
 	```blocks
-		change [colour v] effect by (pick random (0) to (200))
+		ändere [Farbe v]-Effekt um (Zufallszahl von (0) bis (200))
 	```
 
 	![screenshot](balloons-colour.png)
 
-	Was passiert wenn dieser Code am Anfang deines Programms eingesetzt wird? �ndert sich etwas, wenn du diesen Code in die `wiederhole fortlaufend` {.blockcontrol} Schleife setzt?
+	Was passiert, wenn du diesen Code am Anfang deines Programms einfügst? Ändert sich etwas, wenn du ihn statt dessen in die `wiederhole fortlaufend`{.blockcontrol}-Schleife setzt? Was hast du lieber?
 	
 ## Speichere dein Projekt { .save }
 
-## Herausforderung: Mehr Zuf�lligkeit {.challenge}
-Kannst du deinen Ballon starten indem du ihn in eine zuf�llige Richtung richtest (zwischen -90 und 180 Grad)?
+## Herausforderung: Mehr Zufälligkeit {.challenge}
+Kannst du deinen Ballon in eine beliebige Richtung (zwischen -90 und 180 Grad) abfliegen lassen?
 
 ## Speichere dein Projekt { .save }
 
-# Schritt 3: Knalle deinen Ballon { .activity }
+# Schritt 3: Lasse den Ballon platzen { .activity .new-page }
 
-Erlauben wir dem Spieler den Ballon platzen zu lassen!
+Erlaube nun dem Spieler, den Luftballon platzen zu lassen!
 
-## Checkliste f�r das Spiel { .check }
+## Arbeitsschritte { .check }
 
-+ Klicke auf deine Ballonfigur, und dann klicke auf die "Kost�me" Sparte. Du kannst alle andern Kost�me l�schen, lass nur ein Ballonkost�m �brig. F�ge ein neues Kost�m hinzu, indem du auf 'Male ein neues Kost�m' und gestalte ein neues Kost�m mit dem Namen 'Knallen'.
++ Klicke auf deine Ballonfigur und dann auf „Kostüme“. Du kannst alle anderen Kostüme löschen und nur ein Ballonkostüm übrig lassen. Füge dann ein neues Kostüm hinzu, indem du auf „Neues Kostüm zeichnen“ klickst. Nenne es „Knallen“ und male eine Explosion.
 
 	![screenshot](balloons-costume.png)
 
-+ Versichere dich, dass dein Ballon zum richtigen Kost�m wechselt, wenn das Spiel beginnt. Dein Code sollte nun so aussehen:
++ Versichere dich, dass dein Ballon zum richtigen Kostüm wechselt, wenn das Spiel beginnt. Dein Code sollte nun so aussehen:
 
 	```blocks
-		when flag clicked
-		switch costume to [balloon1-a v]
-		point in direction (pick random (-90) to (180))
-		go to x:(pick random (-150) to (150)) y:(pick random (-150) to (150))
-		change [color v] effect by (pick random (0) to (200))
-		forever
-			move (1) steps
-			if on edge, bounce
-		end
+		Wenn die grüne Flagge angeklickt
+		wechsle zu Kostüm [balloon1-a v]
+		setze Richtung auf (Zufallszahl von (-90) bis (180))
+		gehe zu x:(Zufallszahl von (-150) bis (150)) y:(Zufallszahl von (-150) bis (150))
+		ändere [Farbe v]-Effekt um (Zufallszahl von (0) bis (200))
+		wiederhole fortlaufend
+			gehe (1) er-Schritt
+			pralle vom Rand ab
+		Ende
 	```
 
-+ Um dem Spieler zu erlauben, dass er den Ballon knallen lassen darf, f�ge diesen Code hinzu:
++ Um dem Spieler zu erlauben den Ballon platzen zu lassen, füge diesen Code hinzu:
 
 	```blocks
-		when this sprite clicked
-		switch costume to [burst v]
-		play sound [pop v]
+		Wenn ich angeklickt werde
+		wechsle zu Kostüm [Knallen v]
+		spiele Klang [pop v]
 	```
 
-+ Teste dein Projekt. Kannst du den Ballon abknallen? Funktioniert es wie erwartet? Du musst diesen Code verbessern, so dass, wenn der Ballon angeklickt wird, das 'knallen' Kost�m f�r eine kurze Zeit angezeigt wird, danach ist es wieder verschwunden. Du kannst all das machen indem du deinen Ballon Code `when sprite clicked` {.blockevents} folgender Ma�en �nderst:  
++ Teste dein Projekt. Kannst du den Ballon abschießen? Funktioniert es wie erwartet? Du kannst diesen Code noch verbessern: Beim Anklicken des Ballons soll er das „Knallen“-Kostüm für kurze Zeit anzeigen und danach verschwinden. Du kannst all das machen, indem du deinen Code nach `Wenn ich angeklickt werde` {.blockevents} so umänderst:
 
 	```blocks
-		when this sprite clicked
-		switch costume to [burst v]
-		play sound [pop v]
-		wait (0.3) secs
-		hide
+		Wenn ich angeklickt werde
+		wechsle zu Kostüm [Knallen v]
+		spiele Klang [pop v]
+		warte (0.3) Sek.
+		verstecke dich
 	```
 
-+ Nun, wenn du den Ballon l�schst, wenn er angeklickt ist, musst du ebenfalls einen `show` {.blocklooks} Block am Anfang von `when flag clicked` {.blockevents} hinzuf�gen.
++ Da der Luftballon sich versteckt, wenn er angeklickt wird, musst du ebenfalls einen `zeige dich`{.blocklooks}-Block am Anfang von dem `Wenn die grüne Flagge angeklickt`{.blockevents}-Ereignis einfügen.
 
-+ Try popping a balloon again, to check that it works properly. If you find it difficult to pop the balloon without dragging it around, you can play the game in fullscreen mode by clicking this button:
++ Versuche den Ballon nochmal zum Platzen zu bringen, damit du siehst, ob es funktioniert. Wenn du es schwierig findest, den Luftballon zum Platzen zu bringen, ohne ihn hin und her zu ziehen, kannst du das Spiel auch im Vollbildschirmmodus spielen, indem du diesen Knopf drückst:
 
 	![screenshot](balloons-fullscreen.png)
 
-## Save your project { .save }
+## Speichere dein Projekt { .save }
 
-# Step 4: Adding a score { .activity .new-page }
+# Schritt 4: Punkte zählen { .activity }
 
-Let's make things more interesting by keeping score.
+Wir werden das Spiel jetzt interessanter machen, indem wir die Punkte zählen.
 
-## Activity Checklist { .check }
+## Arbeitsschritte { .check }
 
-+ To keep the player's score, you need a place to put it. A _variable_ is a place to store data that can change, like a score.
-
-	To create a new variable, click on the 'Scripts' tab, select `Data` {.blockdata} and then click 'Make a Variable'.
++ Um den Punktestand festzuhalten, brauchst du einen Platz, wo du ihn notieren kannst. Eine „Variable“ ist ein solcher Platz, an dem du Daten abspeichern kannst. Diese Daten (wie zum Beispiel die Punktezahl) dürfen sich auch ändern. Darum heißen _„Variablen“_ auch so.
+	
+	Um eine neue Variable zu erstellen, klicke zuerst auf „Skripte“, dann auf den Bereich `Daten` {.blockdata}, und wähle dann „Neue Variable“.
 
 	![screenshot](balloons-score.png)
 
-	Type 'score' as the name of the variable, make sure that it is available for all sprites, and click 'OK' to create it. You'll then see lots of code blocks that can be used with your `score` {.blockdata} variable.
-
+	Gib „Punktestand“ als Variablennamen ein. Vergewissere dich, dass die Variable für alle Figuren zur Verfügung steht und klicke auf „OK“, um sie zu erstellen. Du wirst anschließend eine Menge neuer Code-Blöcke sehen, die mit deiner `Punktestand`{.blockdata}-Variable verwendet werden können.
+	
 	![screenshot](balloons-variable.png)
 
-	You'll also see the score in the top-left of the stage.
+	Du wirst die Variable auch oben links auf der Bühne sehen.
 
 	![screenshot](balloons-stage-score.png)
 
-+ When a new game is started (by clicking the flag), you want to set the player's score to 0. Add this code to the top of the balloon's `when flag clicked` {.blockevents} code:
++ Wenn ein neues Spiel anfängt, d.h. wenn du die grüne Flagge anklickst, willst du den Punktestand des Spielers auf 0 zurücksetzen. Füge diesen Block oberhalb vom `Wenn die grüne Flagge angeklickt`{.blockevents}-Code hinzu:
 
 	```blocks
-	set [score v] to [0]
+	setze [Punktestand v] auf [0]
 	```
 
-+ Whenever a balloon is popped, you need to add 1 to the score:
++ Immer wenn ein Ballon platzt, musst du 1 zum Punktestand hinzurechnen:
 
 	```blocks
-		when this sprite clicked
-		switch costume to [burst v]
-		play sound [pop v]
-		wait (0.3) secs
-		change [score v] by (1)
-		hide
+		Wenn ich angeklickt werde
+		wechsle zu Kostüm [Knallen v]
+		spiele Klang [pop v]
+		warte (0.3) Sek.
+		ändere [Punktestand v] um (1)
+		verstecke dich
 	```
 
-+ Run your program again and click the balloon. Does your score change?
++ Starte dein Programm erneut und klicke auf den Ballon. Ändert sich dein Punktestand?
 
-## Save your project { .save }
+## Speichere dein Projekt { .save }
 
-# Step 5: Lots of balloons { .activity }
+# Schritt 5: Viele Ballons { .activity .new-page }
 
-Popping 1 balloon isn't much of a game, so let's add lots more!
+Nur einen Ballon platzen zu lassen reicht nicht, also lass uns viele Luftballons hinzufügen!
 
-One simple way to get lots of balloons is just to right-click on the balloon sprite and click 'duplicate'. This is OK if you only want a few, but what if you need 20? or 100? Are you really going to click 'duplicate' that many times?
+Ein einfacher Trick viele Ballons zu bekommen, ist, mit der rechten Maustaste auf die Ballonfigur zu klicken und „Duplizieren“ zu wählen. Dies ist in Ordnung, wenn du nur ein paar Ballons benötigst. Was aber, wenn du 20 oder 100 Ballons brauchst? Willst du wirklich so oft „Duplizieren“?
 
-## Activity Checklist { .check }
+## Arbeitsschritte { .check }
 
-+ A much better way of getting lots of balloons is to _clone_ the balloon sprite.
++ Ein besserer Weg, viele Ballons zu bekommen, ist es die Ballonfigur zu _klonen_.
 
-	Drag your balloon `when flag clicked` {.blockevents} code (except the `score` {.blockdata} block) off of the event (don't delete it), and instead add code to create 20 balloon clones.
+	Ziehe deinen Code (ohne den `Punktestand`{.blockdata}-Block) aus dem `Wenn die grüne Flagge angeklickt`{.blockevents}-Ereignis heraus. Lösche ihn aber nicht und füge stattdessen einen neuen Code hinzu, um den Ballon 20-mal zu klonen.
 
-	You can now attach the code you've just removed to the `when I start as a clone` {.blockevents} event. You should also replace the `hide` {.blocklooks} block in the balloon-clicking script with a `delete this clone` {.blockcontrol} block.
-
-	Your balloon code should now look like this:
+	Du kannst nun den Code, den du gerade verschoben hast, zu einem neuen `Wenn ich als Klon entstehe`{.blockcontrol}-Ereignis (aus dem Bereich „Steuerung“) hinzufügen. Du solltest ebenfalls den `verstecke dich`{.blocklooks}-Block in dem `Wenn ich angeklickt werde`{.blockevents}-Ereignis durch `lösche diesen Klon`{.blockcontrol} ersetzen.
+	
+	Dein Code sollte nun so aussehen: 
 
 	![screenshot](balloons-clone.png)
 
-+ Test your project! Now when the flag is clicked, your main balloon sprite will hide and then clone itself 20 times. When each of these 20 clones is started, they will each bounce around the screen randomly, just as they did before. See if you can pop the 20 balloons!
++ Teste dein Projekt! Wenn du jetzt die Flagge anklickst, wird sich der Hauptballon verstecken und sich dann 20-mal klonen. Jeder der 20 Klone wird ziellos über den Bildschirm wandern, so wie bisher. Probiere mal, die 20 Luftballons platzen zu lassen!
 
-## Save your project { .save }
+## Speichere dein Projekt { .save }
 
-# Step 6: Adding a timer { .activity }
+# Schritt 6: Einen Timer hinzufügen { .activity .new-page }
 
-You can make your game more interesting, by only giving your player 10 seconds to pop as many balloons as possible.
+Du kannst dein Spiel auch interessanter gestalten, indem du dem Spieler nur 10 Sekunden Zeit gibst, um so viele Ballons wie möglich platzen zu lassen.
 
-## Activity Checklist { .check }
+## Arbeitsschritte { .check }
 
-+ You can use another variable to store the remaining time left. Click on the stage, and create a new variable called 'time':
++ Du kannst eine andere Variable benutzen, um die restliche Zeit zu speichern. Klicke auf die Bühne und erstelle eine neue Variable mit dem Namen „Zeit“:
 
 	![screenshot](balloons-time.png)
 
-+ This is how the timer should work:
++ So soll der Timer funktionieren:
 
-	+ The timer should start at 10 seconds;
-	+ The timer should count down every second;
-	+ The game should stop when the timer gets to 0.
+	+ Der Timer soll 10 Sekunden dauern;
+	+ Der Timer soll jede Sekunde herunter zählen;
+	+ Das Spiel soll enden, wenn der Timer 0 erreicht hat.
 
-	Here's the code to do this, which you can add to your _stage_:
+	Hier ist der Code, um dies zu tun. Du kannst ihn zu deiner _Bühne_ hinzufügen:
 
 	```blocks
-		when flag clicked
-		set [time v] to [10]
-		repeat until <(time) = [0]>
-			wait (1) secs
-			change [time v] by (-1)
-		end
-		stop [all v]
+		Wenn die grüne Flagge angeklickt
+		setze [Zeit v] auf [10]
+		wiederhole bis <(Zeit) = [0]>
+			warte (1) Sek.
+			ändere [Zeit v] um (-1)
+		Ende
+		stoppe [alles v]
 	```
 
-	To add the `repeat until`{.blockcontrol}`time`{.blockdata}`= 0`{.blockoperators} code, first you'll need to drag a green `=` {.blockoperators} block, onto your `repeat until` {.blockcontrol} block:
+	Um den Block `wiederhole bis`{.blockcontrol}`Zeit`{.blockdata}`= 0`{.blockoperators} zu erstellen, musst du zuerst einen grünen `=` {.blockoperators} in dein `wiederhole bis` {.blockcontrol} einfügen:
 
 	![screenshot](balloons-timer-1.png)
 
-	You can then drag your `time` {.blockdata} variable onto the `=` {.blockoperators} block:
+	Anschließend kannst du deine `Zeit`{.blockdata}-Variable in den `=`{.blockoperators}-Block ziehen:
 
 	![screenshot](balloons-timer-2.png)
 
-+ Drag your 'time' variable display to the right side of the stage. You can also right-click on the variable display and choose 'large readout' to change how the time is displayed.
++ Verschiebe die Anzeige der `Zeit`{.blockdata}-Variable auf die rechte Seite der Bühne. Du kannst die Anzeige auch doppelklicken, um die Darstellung der Zeit zu verändern.
 
-	![screenshot](balloons-readout.png)
++ Teste dein Spiel. Wie viele Punkte kannst du erzielen? Wenn dein Spiel zu einfach ist, dann kannst du:
 
-+ Test your game. How many points can you score? If your game is too easy, you can:
+	+ Deinem Spieler weniger Zeit geben
+	+ Mehr Ballons hinzufügen
+	+ Die Ballons schneller bewegen
+	+ Die Ballons kleiner gestalten
 
-	+ Give the player less time;
-	+ Have more balloons;
-	+ Make the balloons move faster;
-	+ Make the balloons smaller.
+	Teste dein Spiel bis du mit dem Schwierigkeitsgrad zufrieden bist.
 
-	Test your game a few times until you're happy that it's the right level of difficulty.
+## Speichere dein Projekt { .save }
 
-## Save your project { .save }
-
-## Challenge: More objects {.challenge}
-Can you add in other objects to your game? You can add good objects, like donuts, that give you lots of points, or bad objects, like bats, that take points away.
+## Herausforderung: Mehr Objekte {.challenge}
+Kannst du noch andere Objekte hinzufügen? Zum Beispiel gute Objekte, wie Donuts, die dir jede Menge Punkte einbringen. Oder böse Objekte, wie zum Beispiel Fledermäuse, die dir Punkte abziehen.
 
 ![screenshot](balloons-objects.png)
 
-You'll need to think about the objects you're adding. Think about:
+Du musst über die Objekte, die du hinzufügst, nachdenken. Überlege dir:
 
-+ How many will there be?
-+ How big is it? How does it move?
-+ How many points will you score (or lose) for clicking it?
-+ Will it move faster or slower than the balloons?
-+ What will it look/sound like when it's been clicked?
++ Wie viele Objekte wird es geben?
++ Wie groß ist das Objekt? Wie bewegt es sich fort?
++ Soll es schneller oder langsamer als die Ballons sein?
++ Wie viele Punkte wirst du erzielen oder verlieren, wenn du darauf klickst?
++ Wie wird es aussehen, wenn es angeklickt wird?
 
-If you need help adding another object, you can reuse the steps above!
+Wenn du beim Hinzufügen anderer Objekte Hilfe brauchst, dann schau dir die Schritte weiter oben an!
 
-## Save your project { .save }
+## Speichere dein Objekt { .save }
